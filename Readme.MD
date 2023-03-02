@@ -29,5 +29,5 @@ Two separate programs were written to access the aforementioned class.
 
 To user either program:
 1. Fork, clone or download this repository
-2. Run the program of choice
+2. Run the program of choice (you can use 2mb.txt and 3mb.txt files for testing if needed)
 3. Follow the prompts
