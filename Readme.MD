@@ -18,3 +18,16 @@ In addition, the algorithm is sensitive to changes in the data. The algorithm re
 
 ## The Update?
 This project presents an improved version of the traditional Huffman coding algorithm, by using dynamic trees that can be re-coded if the frequency of a symbol changes. This allows the algorithm to adapt to changing frequencies of the symbols in the input data, making it more efficient for data streams where the frequencies of the symbols change over time, such as in text as it is being typed. The proposed forward-looking algorithm is expected to be useful in various applications where data is streaming, such as text-based communications and multimedia streaming.
+
+## Instructions
+The novel implementation is in the NovelForwardLookingHuffman class, find in the file with the same name. 
+
+Two separate programs were written to access the aforementioned class.
+- The `huffman_text_program` allows users to compress and decompress strings or texts. This program performs the various operations and outputs the results in the terminal.
+
+- The `huffman_files_program` allows users to compress and decompress files. Currently, only files containing texts are supported. The results are outputed in a text file, with a name determined by the user.
+
+To user either program:
+1. Fork, clone or download this repository
+2. Run the program of choice
+3. Follow the prompts

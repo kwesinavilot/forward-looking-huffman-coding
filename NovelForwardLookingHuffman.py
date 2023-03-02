@@ -1,6 +1,6 @@
 import heapq
 
-class ForwardLookingHuffmanReal:
+class NovelForwardLookingHuffman:
     def __init__(self):
         self.heap = []
         self.codes = {}

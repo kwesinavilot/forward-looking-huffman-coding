@@ -1,6 +1,6 @@
 import sys
 import time
-from ForwardLookingHuffmanReal import ForwardLookingHuffmanReal
+from NovelForwardLookingHuffman import ForwardLookingHuffmanReal
 
 # initialize the tree class
 huffman = ForwardLookingHuffmanReal()
