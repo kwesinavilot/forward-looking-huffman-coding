@@ -93,16 +93,28 @@ while True:
         input_filename = input("Enter the filename to decompress: ")
         output_filename = input("Enter the filename to store the decompressed data: ")
         with open(input_filename, 'r') as input_file, open(output_filename, 'w') as output_file:
-            data = input_file.read()
+            print('Beginning sequence...\nReading compressed file data...', flush=True)
+
+            compressed_size = os.path.getsize(input_filename)
+            
+            compressed_data = input_file.read()
+
+            print('File reading complete.\nRunning decompression sequence...', flush=True)
+
             start_time = time.time()
-            decompressed_data = huffman.decompress(data)
+            decompressed_data = huffman.decompress(compressed_data)
             end_time = time.time()
+
+            print('Decompression complete!\nWriting to new file...', flush=True)
             output_file.write(decompressed_data)
-            original_size = os.path.getsize(input_filename)
-            compressed_size = os.path.getsize(output_filename)
-            compression_ratio = (original_size - compressed_size) / original_size
-            print("\nTime taken to decompress the data: {:.6f} seconds".format(end_time - start_time))
+
+            original_size = os.path.getsize(output_filename)
+            compression_ratio = (compressed_size - original_size) / compressed_size
+
             print(f"Decompressed data saved in {output_filename}")
+            print('\nOriginal Compressed File Size: ', compressed_size)
+            print('\nNew File Size: ', original_size)
+            print("Time taken to decompress the data: {:.6f} seconds".format(end_time - start_time))
             print(f"Compression Ratio: {compression_ratio:.3f}\n")
 
     elif user_input.lower() == 'q':
